@@ -1,0 +1,179 @@
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
+intents:
+- cumprimentar
+- diferenca_rpv_precatorio
+- prazo_deposito
+- conceito
+- diferenca_entre_RPV_PRC
+- nao_sei_se_tenho_RPV
+- situacao_RPV
+- pesquisar_RPV_porCPFCNPJ
+- pesquisar_RPV_porOAB
+- pesquisar_RPV_porNumero
+- valor_RPV
+- nao_tenho_certificado_digital
+- atualizacao_RPV
+- o_que_sei_falar
+- despedir
+- out_of_scope
+- diga_mais
+- tudo_bem
+- elogios
+- afirmar
+- negar
+- objetivo
+- cancelar
+- request_login
+- limpar_slots
+entities:
+- cpf
+slots:
+  cpf:
+    type: unfeaturized
+responses:
+  utter_prazo_deposito:
+  - text: "Você recebe até o final do mês seguinte as RPVs que chegam em um dado mês.\n \
+          \ Quer dizer, em até 60 dias.\n" 
+  - text: "As RPVs que chegam no Tribunal em um mês, são pagas até o final do mês seguinte.\
+          \ Quer dizer, no máximo, em 60 dias.\n"
+  - text: "Você recebe no mês seguinte as RPVs que chegam num dado mês no Tribunal.\n \
+          \ Quer dizer, em 60 dias, no máximo.\n"
+ 
+  utter_conceito_parte1:
+  - text: "É uma forma de se pedir ao poder público que pague o débito devido a quem ganhou contra ele uma causa na justiça.\n"
+  utter_conceito_parte2:
+  - text: "Esse pedido é feito pelo próprio juiz que decidiu a causa.\n"
+  utter_conceito_parte3:
+  - text: "RPV é uma sigla para Requisição de Pequeno Valor.\n"  
+  utter_conceito_parte4:
+  - text: "Chama-se de pequeno valor porque os débitos a serem pagos estão limitados em 60 salários mínimos na Justiça Federal.\n" 
+
+  utter_diferenca_precatorio1:
+  - text: "Precatórios, assim com as RPVs, dizem respeito a débitos do poder público pra com um cidadão, \n \
+        \ como resultado do que foi decidido em uma ação judicial.\n"
+  utter_diferenca_precatorio2:
+  - text: "A principal diferença é que com as RPVs só podem ser pagos os débitos de até 60 salários mínimos na Justiça Federal.\n"   
+
+  utter_nao_sei_se_tenho_RPV:
+  - text: "Pra saber se você tem uma RPV no TRF5, pesquise pelo endereço: http://rpvprecatorio.trf5.jus.br\n" 
+  
+  utter_situacao_RPV_parte1:
+  - text: "Pra saber a situação de sua RPV no TRF5, use o endereço: http://rpvprecatorio.trf5.jus.br\n" 
+  utter_situacao_RPV_parte2:
+  - text: "Vc pode localizar sua RPV pelo número do sequencial, por seu CPF, pela OAB do advogado, entre outros critérios de pesquisa\n"   
+  utter_situacao_RPV_parte3:
+  - text: "Na tela q aparece, vc escolhe o critério e digita o conteúdo da pesquisa no campo do formulário\n"    
+  utter_situacao_RPV_parte4:
+  - text: "Já no TRF3, vc pode saber a situação de sua RPV pelo endereço http://web.trf3.jus.br/consultas/Internet/ConsultaReqPag\n"    
+  utter_situacao_RPV_parte5:
+  - text: "No formulário, vc digita nos campos os conteúdos a serem pesquisados pra localizar sua RPV. Não precisa preencher todos os campos.\n"    
+  
+
+  utter_pesquisar_RPV_CPFCNPJ_parte1:
+  - text: "No TRF5, selecione a opção de consulta 'CPF/CNPJ' na página http://rpvprecatorio.trf5.jus.br e \n"
+  utter_pesquisar_RPV_CPFCNPJ_parte2:
+  - text: "digite só os números de seu CPF ou CNPJ no campo 'CPF/CNPJ'. Não digite pontos, traços ou barras.\n"
+  utter_pesquisar_RPV_CPFCNPJ_parte3:
+  - text: "Deixe marcada a opção 'RPV' e aperte o botão pesquisar pra trazer suas RPVs.\n"
+  utter_pesquisar_RPV_CPFCNPJ_parte4:
+  - text: "Já no TRF3, digite só os números de seu CPF ou CNPJ no campo 'CPF/CNPJ' do formulário que aparece ao\n"
+  utter_pesquisar_RPV_CPFCNPJ_parte5:
+  - text: " abrir a página http://web.trf3.jus.br/consultas/Internet/ConsultaReqPag. Não digite pontos, traços ou barras. \n"
+  utter_pesquisar_RPV_CPFCNPJ_parte6:
+  - text: " Depois é só confirmar a opção 'Não sou um robô', antes de apertar o botão pesquisar pra trazer suas RPVs.\n"
+
+  utter_pesquisar_RPV_OAB_parte1:
+  - text: "No TRF5, selecione a opção de consulta 'Número da OAB' na página http://rpvprecatorio.trf5.jus.br e \n"
+  utter_pesquisar_RPV_OAB_parte2:
+  - text: "digite os dígitos e caracteres de sua OAB no campo 'Número da OAB', após ter selecionado a sigla do estado. Não digite pontos, traços ou barras'.\n"
+  utter_pesquisar_RPV_OAB_parte3:
+  - text: "Deixe marcada a opção 'RPV' e aperte o botão pesquisar pra trazer suas RPVs.\n"
+  utter_pesquisar_RPV_OAB_parte4:
+  - text: "Já no TRF3, digite a sigla do estado e os dígitos e caracteres de sua OAB no campo 'OAB' do formulário que aparece ao \n"
+  utter_pesquisar_RPV_OAB_parte5:
+  - text: "abrir a página http://web.trf3.jus.br/consultas/Internet/ConsultaReqPag. Não digite pontos, traços ou barras.\n"
+  utter_pesquisar_RPV_OAB_parte6:
+  - text: " Depois é só confirmar a opção 'Não sou um robô', antes de apertar o botão pesquisar pra trazer suas RPVs.\n"
+
+  utter_pesquisar_RPV_NUMERO_parte1:
+  - text: "No TRF5, selecione a opção de consulta 'Sequencial do RPV ou precatório' na página http://rpvprecatorio.trf5.jus.br e \n"
+  utter_pesquisar_RPV_NUMERO_parte2:
+  - text: "digite os dígitos do número de sua RPV no campo 'Sequencial do RPV ou precatório'. Não digite pontos, traços ou barras.\n"
+  utter_pesquisar_RPV_NUMERO_parte3:
+  - text: "Deixe marcada a opção 'RPV' e aperte o botão pesquisar pra trazer suas RPVs.\n"
+  utter_pesquisar_RPV_NUMERO_parte4:
+  - text: "Já no TRF3, digite os dígitos do número de sua RPV no campo 'Número do Protocolo' do formulário que aparece ao \n"
+  utter_pesquisar_RPV_NUMERO_parte5:
+  - text: "abrir a página http://web.trf3.jus.br/consultas/Internet/ConsultaReqPag. Não digite pontos, traços ou barras.\n"
+  utter_pesquisar_RPV_NUMERO_parte6:
+  - text: "Depois é só confirmar a opção 'Não sou um robô', antes de apertar o botão pesquisar pra trazer suas RPVs.\n"
+  
+  utter_valor_RPV1:
+  - text: "Pra saber o valor de sua RPV no TRF5 pela internet, você precisa ter um certificado digital.\n" 
+  utter_valor_RPV2:
+  - text: "Com o certificado, basta acessar a página: http://rpvprecatorio.trf5.jus.br,\n \
+        \ escolher a opção 'demonstrativo de cálculo' e se identificar.\n"
+
+  utter_nao_tenho_certificado_digital:
+  - text: "Caso não tenha um certificado digital, peça para seu advogado fazer a consulta.\n"
+  - text: "Seu advogado dispõe de certificado digital e poderá fazer a consulta pra você, caso não tenha.\n"
+
+  utter_atualizacao_RPV1:
+  - text: "O IPCA-e é usado pra atualizar a RPV de sua data-base até o dia do depósito, caso ela não seja tributária.\n"
+  utter_atualizacao_RPV2:
+  - text: "Não sendo tributária, são aplicados, também, juros de mora de sua data-base até sua entrada no tribunal.\n"
+  utter_atualizacao_RPV3:
+  - text: "Se sua RPV for tributária, será atualizada exclusivamente pela Selic, \n \
+        \ já que em sua composição já há juros e correção monetária.\n"
+
+  utter_continuar_conversa:
+  - text: "Gostaria de saber algo mais?"
+  - text: "Posso ajudar em mais alguma coisa?\n"
+  - text: "Tem alguma outra dúvida?\n"
+  
+  utter_fallback:
+  - text: "Desculpe, ainda não sei falar sobre isso ou talvez não consegui entender\
+      \ direito\nVocê pode perguntar de novo de outro jeito?\n"
+  - text: "Hummmm... Não sei se entendi. Pode escrever de outra forma?\n"
+  - text: "Acho que não te entendi, você pode me perguntar de novo usando outras palavras?\n"
+  - text: "Vamos tentar mais uma vez? Eu não consegui te entender direito, me pergunta\
+      \ de outro jeito?\n"
+  utter_diga_mais:
+  - text: "Por enquanto, só entendo perguntas completas.\nComo por exemplo \"qual\
+      \ é o melhor time do Brasil?\".\nSe você puder pergunta de novo de outro jeito\
+      \ :)\n"
+  utter_elogios:
+  - text: "Obrigada! É sempre bom dar e receber elogios :P\n"
+  utter_cumprimentar:
+  - text: "Oi, eu sou um bot, um assistente virtual do TRF pra lhe ajudar\n\
+      \ com as dúvidas mais comuns sobre as RPVs - Requisições de Pequeno Valor.\n
+      \ Qual a sua dúvida?\n"
+  utter_o_que_sei_falar:
+  - text: "Eu posso falar de assuntos simples, como por exemplo \"qual é o seu filme\
+      \ favorito?\"\n\nTem alguns assuntos que eu também ainda não domino, \nmas vou\
+      \ deixar você descobrir o que eu sei responder.\n\nE, aí do que podemos conversar?\n"
+  utter_despedir:
+  - text: "Foi um prazer te ajudar!\nSempre que tiver alguma dúvida, volte aqui!\n\
+      Até logo!\n"
+  - text: "Foi um prazer te ajudar!\nSempre que precisar, volte aqui!\nAté a próxima!\n"
+  - text: "Foi um prazer te ajudar!\nQuando surgir alguma dúvida, volte aqui!\nAté\
+      \ mais!\n"
+  utter_tudo_bem:
+  - text: "Tudo bem, obrigada! Em que posso te ajudar?\n"
+  
+  utter_ask_cpf:
+  - text: Qual o seu CPF?
+  utter_errado_cpf_formato:
+  - text: Desculpe, o formato informado do CPF não está correto, digite apenas números ou usando '000.000.000-00'.
+  utter_errado_cpf_invalido:
+  - text: Desculpe, o valor informado do CPF está inválido.
+    
+  utter_objetivo:
+  - text: "Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar\
+      \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
+      \ aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate\n\
+      \n Ah e eu sou Open Source ;)"
+  
+  

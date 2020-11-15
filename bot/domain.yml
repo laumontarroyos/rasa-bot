@@ -10,6 +10,7 @@ intents:
 - nao_sei_se_tenho_RPV
 - situacao_RPV
 - pesquisar_RPV_porCPFCNPJ
+- pesquisar_por_CPF
 - pesquisar_RPV_porOAB
 - pesquisar_RPV_porNumero
 - valor_RPV
@@ -27,10 +28,13 @@ intents:
 - cancelar
 - request_login
 - limpar_slots
+- teste
 entities:
 - cpf
 slots:
   cpf:
+    type: unfeaturized
+  confirm:
     type: unfeaturized
 responses:
   utter_prazo_deposito:
@@ -175,5 +179,23 @@ responses:
       \ em muito em exemplos! no meu repositório tem muita coisa legal que vc pode\
       \ aprender! Acessa lá: https://github.com/lappis-unb/rasa-ptbr-boilerplate\n\
       \n Ah e eu sou Open Source ;)"
+
+  utter_cpf_confirmed:
+  - text: O CPF recuperado pelo formAction foi {cpf}.
+  utter_cpf_cancelled:
+  - text: Cancelado, mas o CPF recuperado pelo formAction foi {cpf}.
+
+  utter_ask_cpf_form_cpf:
+  - text: Qual seu CPF?
+  utter_ask_cpf_form_confirm:
+  - buttons:
+    - payload: /afirmar
+      title: Sim
+    - payload: /negar
+      title: Não
+    text: Confirma o CPF {cpf} informado?
   
-  
+actions:
+- action_teste
+forms:
+- cpf_form

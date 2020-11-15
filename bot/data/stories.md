@@ -80,6 +80,15 @@
 * negar
   - utter_despedir
 
+## story_pesquisar_por_CPF
+* pesquisar_por_CPF
+    - cpf_form
+    - form{"name": "cpf_form"}
+    - form{"name": null}
+    - utter_continuar_conversa
+* negar
+  - utter_despedir
+
 ## story_pesquisar_RPV_porOAB
 * pesquisar_RPV_porOAB
   - utter_pesquisar_RPV_OAB_parte1
@@ -160,3 +169,7 @@
 ## objetivo
 * objetivo
     - utter_objetivo
+
+## story_teste
+* teste
+  - action_teste

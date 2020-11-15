@@ -22,7 +22,7 @@ class ActionTeste(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         try:
-            dispatcher.utter_message("Mensagem enviada por uma custom action.")
+            dispatcher.utter_message("Mensagem enviada por Laureano em uma custom action.")
         except ValueError:
             dispatcher.utter_message(ValueError)
         return []

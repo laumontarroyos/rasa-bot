@@ -263,24 +263,18 @@
 - gostaria de saber de meu rpv
 - saber de meu rpv
 
+##intent:pesquisar_RPV_porCPFCNPJ
+
 
 ##intent:pesquisar_RPV_porCPFCNPJ
 - Como pesquiso minha RPV por CPF
-- acompanhar RPV por CPF
 - acompanho RPV por CPF
-- buscar RPV por CPF
 - busco RPV por CPF
-- consultar RPV por CPF
 - consulto RPV por CPF
-- localizar RPV por CPF
 - localizo RPV por CPF
-- pesquisar RPV por CPF
 - pesquiso RPV por CPF
-- procurar RPV por CPF
 - procuro RPV por CPF
-- situação RPV por CPF
-- status RPV por CPF
-- RPV por CPF
+
 
 - Como pesquiso minha RPV por CNPJ
 - acompanhar RPV por CNPJ
@@ -298,6 +292,19 @@
 - situação RPV por CNPJ
 - status RPV por CNPJ
 - RPV por CNPJ
+
+##intent:pesquisar_por_CPF
+- acompanhar RPV por CPF
+- buscar RPV por CPF
+- consultar RPV por CPF
+- localizar RPV por CPF
+- pesquisar RPV por CPF
+- procurar RPV por CPF
+- situação RPV por CPF
+- status RPV por CPF
+- RPV por CPF
+
+
 
 ##intent:pesquisar_RPV_porOAB
 - Como pesquiso minha RPV pela OAB
@@ -668,4 +675,11 @@
 - Que loucura está acontecendo?!
 - Não quero compartilhar meus dados
 - Não quero mais informar meus dados
+
+## intent:teste
+- testar
+- testar action
+- bora testar
+- teste
+- laureano
 

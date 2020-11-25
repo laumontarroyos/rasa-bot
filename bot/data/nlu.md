@@ -264,9 +264,6 @@
 - saber de meu rpv
 
 ##intent:pesquisar_RPV_porCPFCNPJ
-
-
-##intent:pesquisar_RPV_porCPFCNPJ
 - Como pesquiso minha RPV por CPF
 - acompanho RPV por CPF
 - busco RPV por CPF
@@ -682,4 +679,18 @@
 - bora testar
 - teste
 - laureano
+
+## intent:informar_cpf
+- [66654815491](cpf)
+- [12345678911](cpf)
+- [666.548.154-91](cpf)
+- [123.456.789-11](cpf)
+- [999.999.999-11](cpf)
+- [99999999999](cpf)
+- meu CPF é [98765432100](cpf)
+- cpf [45637281835](cpf)
+- CPF [66654815491](cpf)
+- CPF [666.548.154-91](cpf)
+- sim, meu cpf é [666.548.154-91](cpf)
+- cpf = [666.548.154-91](cpf)
 

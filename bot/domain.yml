@@ -29,6 +29,7 @@ intents:
 - request_login
 - limpar_slots
 - teste
+- informar_cpf
 entities:
 - cpf
 slots:
@@ -164,15 +165,28 @@ responses:
   - text: "Foi um prazer te ajudar!\nSempre que precisar, volte aqui!\nAté a próxima!\n"
   - text: "Foi um prazer te ajudar!\nQuando surgir alguma dúvida, volte aqui!\nAté\
       \ mais!\n"
+  utter_ask_cpf:
+  - text: "Qual o seu CPF?\n"
+  utter_ask_confirm:
+  - text: "Confirma o CPF informado?"
+    buttons:
+    - title: "Sim"
+      payload: "/afirmar"
+    - title: "Não"
+      payload: "/negar"
+
   utter_tudo_bem:
   - text: "Tudo bem, obrigada! Em que posso te ajudar?\n"
-  
-  utter_ask_cpf:
-  - text: Qual o seu CPF?
-  utter_errado_cpf_formato:
-  - text: Desculpe, o formato informado do CPF não está correto, digite apenas números ou usando '000.000.000-00'.
-  utter_errado_cpf_invalido:
-  - text: Desculpe, o valor informado do CPF está inválido.
+
+  utter_ask_cpf_form_cpf:
+  - text: "Qual seu CPF?"
+  utter_ask_cpf_form_confirm:
+  - text: "Confirma o CPF informado?"
+    buttons:
+    - title: "Sim"
+      payload: "/afirmar"
+    - title: "Não"
+      payload: "/negar"
     
   utter_objetivo:
   - text: "Eu sou um chatbot Básico. Sei falar de coisas pontuais, mas eu posso ajudar\
@@ -181,21 +195,10 @@ responses:
       \n Ah e eu sou Open Source ;)"
 
   utter_cpf_confirmed:
-  - text: O CPF recuperado pelo formAction foi {cpf}.
+  - text: "O CPF recuperado pelo formAction foi {cpf}."
   utter_cpf_cancelled:
-  - text: Cancelado, mas o CPF recuperado pelo formAction foi {cpf}.
-
-  utter_ask_cpf_form_cpf:
-  - text: Qual seu CPF?
-  utter_ask_cpf_form_confirm:
-  - buttons:
-    - payload: /afirmar
-      title: Sim
-    - payload: /negar
-      title: Não
-    text: Confirma o CPF {cpf} informado?
-  
+  - text: "Cancelado, mas o CPF recuperado pelo formAction foi {cpf}."
 actions:
 - action_teste
 forms:
-- cpf_form
+  - cpf_form

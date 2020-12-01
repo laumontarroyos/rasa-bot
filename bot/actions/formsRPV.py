@@ -1,3 +1,4 @@
+import requests
 from typing import Dict, Text, Any, List, Union, Optional
 import logging
 from rasa_sdk import Tracker, Action
@@ -77,6 +78,13 @@ class CpfForm(FormAction):
         if tracker.get_slot("confirm"):
             #dispatcher.utter_message(template="utter_cpf_confirmed")
             dispatcher.utter_message("Confirmado, recuperado CPF: {}".format(cpf))
+            # testando chamada de API
+            response = requests.get("https://api-llmf.herokuapp.com/rpv/50")
+            if response.status_code == 200:
+                resposta = response.json()
+                dispatcher.utter_message("RPV recuperada:{}".format(resposta))
+            else:
+                dispatcher.utter_message("RPV não recuperado. retorno:{}".format(reponse.status_code))
         else:
             #dispatcher.utter_message(template="utter_cpf_cancelled")
             dispatcher.utter_message("Cancelado, porém recuperado CPF: {}".format(cpf))

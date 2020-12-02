@@ -84,8 +84,11 @@ class CpfForm(FormAction):
                 resposta = response.json()
                 dispatcher.utter_message("RPV recuperada:{}".format(resposta))
             else:
-                dispatcher.utter_message("RPV não recuperado. retorno:{}".format(reponse.status_code))
+                dispatcher.utter_message("RPV não recuperado. retorno:{}".format(response.status_code))
         else:
             #dispatcher.utter_message(template="utter_cpf_cancelled")
             dispatcher.utter_message("Cancelado, porém recuperado CPF: {}".format(cpf))
-        return []
+        #SlotSet("cpf", None)
+        #SlotSet("Confirm", None)
+        return [SlotSet("cpf", None),
+                SlotSet("Confirm", None)]
